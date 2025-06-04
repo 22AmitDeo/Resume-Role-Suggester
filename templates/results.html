@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Job Match Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+            background: #f9f9f9;
+        }
+
+        .container {
+            background: white;
+            padding: 2rem;
+            max-width: 600px;
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .role {
+            background: #e9ecef;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 6px;
+        }
+
+        .score {
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Top Matching Job Roles</h2>
+        {% if matches %}
+        {% for role, score in matches %}
+        <div class="role">
+            <h3>{{ role }}</h3>
+            <p>Match Score: <span class="score">{{ (score * 100) | round(2) }}%</span></p>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p>No matches found. Try uploading a different resume.</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>
