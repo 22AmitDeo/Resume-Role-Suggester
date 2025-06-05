@@ -17,6 +17,8 @@ A Flask-based web application that analyzes PDF resumes and matches them to the 
 ## 📸 Demo
 
 > Upload your resume → Get top job role matches with match scores
+> ![image](https://github.com/user-attachments/assets/05750e60-ba2b-4bad-ab4f-7aa35a5f9c0b)
+
 
 ---
 
